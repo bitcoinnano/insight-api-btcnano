@@ -1,12 +1,16 @@
 {
-  "name": "insight-api",
-  "description": "A Bitcoin blockchain REST and web socket API service for Bitcore Node.",
+  "name": "insight-api-btcnano",
+  "description": "A Btcnano blockchain REST and web socket API service for Btcnano Node.",
   "version": "0.4.3",
   "repository": {
     "type": "git",
-    "url": "git://github.com/bitpay/insight-api.git"
+    "url": "git://github.com/bitcoinnano/insight-api-btcnano.git"
   },
   "contributors": [
+    {
+      "name": "Jack chen",
+      "email": "jackchen1615@gmail.com"
+    },
     {
       "name": "Gustavo Cortez",
       "email": "cmgustavo83@gmail.com"
@@ -41,15 +45,15 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/bitpay/insight-api/issues"
+    "url": "https://github.com/bitcoinnano/insight-api-btcnano/issues"
   },
-  "homepage": "https://github.com/bitpay/insight-api",
+  "homepage": "https://github.com/bitcoinnano/insight-api-btcnano",
   "license": "MIT",
   "keywords": [
     "insight",
     "insight api",
     "blockchain",
-    "bitcoin api",
+    "btcnano api",
     "blockchain api",
     "json",
     "bitcore"
@@ -64,8 +68,8 @@
   "bitcoreNode": "lib",
   "dependencies": {
     "async": "*",
-    "bitcore-lib": "^0.13.7",
-    "bitcore-message": "^1.0.1",
+    "btcnano-lib": "^0.1.0",
+    "btcnano-message": "^0.1.0",
     "body-parser": "^1.13.3",
     "compression": "^1.6.1",
     "lodash": "^2.4.1",
@@ -79,44 +83,5 @@
     "proxyquire": "^1.7.2",
     "should": "^8.3.1",
     "sinon": "^1.10.3"
-  },
-  "gitHead": "95bcad836cc49f2b0ab9e47ba5f4d9fae43ef56e",
-  "_id": "insight-api@0.4.3",
-  "_shasum": "48eb0cd857c496b0682b9eabd3f7a9c5f2934a40",
-  "_from": "insight-api@latest",
-  "_npmVersion": "2.15.5",
-  "_nodeVersion": "4.4.5",
-  "_npmUser": {
-    "name": "braydonf",
-    "email": "braydon@bitpay.com"
-  },
-  "dist": {
-    "shasum": "48eb0cd857c496b0682b9eabd3f7a9c5f2934a40",
-    "tarball": "https://registry.npmjs.org/insight-api/-/insight-api-0.4.3.tgz"
-  },
-  "maintainers": [
-    {
-      "name": "braydonf",
-      "email": "braydon@bitpay.com"
-    },
-    {
-      "name": "ematiu",
-      "email": "ematiu@gmail.com"
-    },
-    {
-      "name": "gabegattis",
-      "email": "gabegattis@gmail.com"
-    },
-    {
-      "name": "patrickbitpay",
-      "email": "patrick@bitpay.com"
-    }
-  ],
-  "_npmOperationalInternal": {
-    "host": "packages-16-east.internal.npmjs.com",
-    "tmp": "tmp/insight-api-0.4.3.tgz_1469033951211_0.9227860060054809"
-  },
-  "directories": {},
-  "_resolved": "https://registry.npmjs.org/insight-api/-/insight-api-0.4.3.tgz",
-  "readme": "ERROR: No README data found!"
+  }
 }

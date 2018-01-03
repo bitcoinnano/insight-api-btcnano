@@ -1,26 +1,26 @@
 # Insight API
 
-A Bitcoin blockchain REST and web socket API service for [Bitcore Node](https://github.com/bitpay/bitcore-node).
+A Btcnano blockchain REST and web socket API service for [Btcnano Node](https://github.com/bitcoinnano/btcnano-node).
 
-This is a backend-only service. If you're looking for the web frontend application, take a look at https://github.com/bitpay/insight-ui.
+This is a backend-only service. If you're looking for the web frontend application, take a look at https://github.com/bitcoinnano/insight-ui-btcnano.
 
 ## Getting Started
 
 ```bashl
-npm install -g bitcore-node@latest
-bitcore-node create mynode
+npm install -g btcnano-node@latest
+btcnano-node create mynode
 cd mynode
-bitcore-node install insight-api
-bitcore-node start
+btcnano-node install insight-api-btcnano
+btcnano-node start
 ```
 
 The API endpoints will be available by default at: `http://localhost:3001/insight-api/`
 
 ## Prerequisites
 
-- [Bitcore Node 3.x](https://github.com/bitpay/bitcore-node)
+- [Btcnano Node 3.x](https://github.com/bitcoinnano/btcnano-node)
 
-**Note:** You can use an existing Bitcoin data directory, however `txindex`, `addressindex`, `timestampindex` and `spentindex` needs to be set to true in `bitcoin.conf`, as well as a few other additional fields.
+**Note:** You can use an existing Btcnano data directory, however `txindex`, `addressindex`, `timestampindex` and `spentindex` needs to be set to true in `btcnano.conf`, as well as a few other additional fields.
 
 ## Notes on Upgrading from v0.3
 
@@ -69,8 +69,8 @@ There are a few changes to the `GET` endpoint for `/addr/[:address]`:
 
 Some additional general notes:
 - The transaction history for an address will be sorted in block order
-- The response for the `/sync` endpoint does not include `startTs` and `endTs` as the sync is no longer relevant as indexes are built in bitcoind.
-- The endpoint for `/peer` is no longer relevant connection to bitcoind is via ZMQ.
+- The response for the `/sync` endpoint does not include `startTs` and `endTs` as the sync is no longer relevant as indexes are built in btcnanod.
+- The endpoint for `/peer` is no longer relevant connection to btcnanod is via ZMQ.
 - `/tx` endpoint results will now include block height, and spentTx related fields will be set to `null` if unspent.
 - `/block` endpoint results does not include `confirmations` and will include `poolInfo`.
 
@@ -89,7 +89,7 @@ The `/tx/<txid>` endpoint JSON response will not include the following fields on
 object.
 - `spentTs`
 
-The `/status?q=getTxOutSetInfo` method has also been removed due to the query being very slow and locking bitcoind.
+The `/status?q=getTxOutSetInfo` method has also been removed due to the query being very slow and locking btcnanod.
 
 Plug-in support for Insight API is also no longer available, as well as the endpoints:
 - `/email/retrieve`
@@ -109,7 +109,7 @@ To protect the server, insight-api has a built it query rate limiter. It can be 
     }
   }
 ```
-With all the configuration options available: https://github.com/bitpay/insight-api/blob/master/lib/ratelimiter.js#L10-17
+With all the configuration options available: https://github.com/bitcoinnano/insight-api-btcnano/blob/master/lib/ratelimiter.js#L10-17
 
 Or disabled entirely with:
 ``` json
