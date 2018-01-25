@@ -1,5 +1,19 @@
 [
   {
+    "poolName": "btcnano-pool",
+    "url": "http://pool.btcnano.org/",
+    "searchStrings": [
+      "/EB8.0/"
+    ]
+  },
+  {
+    "poolName": "btcnano-pool2",
+    "url": "http://pool2.btcnano.org/",
+    "searchStrings": [
+      "Z-NOMP"
+    ]
+  },
+  {
     "poolName": "50BTC",
     "url": "https://50btc.com/",
     "searchStrings": [
