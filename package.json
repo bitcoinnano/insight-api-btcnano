@@ -1,7 +1,7 @@
 {
   "name": "insight-api-btcnano",
   "description": "A Btcnano blockchain REST and web socket API service for Btcnano Node.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/bitcoinnano/insight-api-btcnano.git"
@@ -68,8 +68,8 @@
   "bitcoreNode": "lib",
   "dependencies": {
     "async": "*",
-    "btcnano-lib": "^0.1.0",
-    "btcnano-message": "^0.1.0",
+    "btcnano-lib": "~0.2.0",
+    "btcnano-message": "~0.1.0",
     "body-parser": "^1.13.3",
     "compression": "^1.6.1",
     "lodash": "^2.4.1",
